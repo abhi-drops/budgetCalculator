@@ -1,0 +1,181 @@
+$primary: #E32525;
+$secondary: #CFCFCF;
+$success:#222831;
+$dark: #2B2B2B;
+$light:#EBEBEB;
+
+$utilities: () !default;
+
+$utilities: map-merge((
+
+  "transparent gradient" : (
+    property: background-image,
+    class: tg,
+    values: (
+      t: linear-gradient(to top , rgba(0, 0, 0, 0) , $dark),
+      b: linear-gradient(to bottom , rgba(0, 0, 0, 0) , $dark),
+      l: linear-gradient(to left , rgba(0, 0, 0, 0) , $dark),
+      r: linear-gradient(to right , rgba(0, 0, 0, 0) , $dark)
+    )
+  ),
+
+  "viewport-height": (
+      property: height,
+      responsive:true,
+      class: vh,
+      values: (
+        300: 300vh,
+        250: 250vh,
+        200: 200vh,
+        150: 150vh,
+        100: 100vh,
+        95:95vh,
+        90:90vh,
+        85:85vh,
+        80:80vh,
+        75:75vh,
+        70:70vh,
+        65:65vh,
+        60:60vh,
+        55:55vh,
+        50:50vh,
+        45:45vh,
+        40:40vh,
+        35:35vh,
+        30:30vh,
+        25:25vh,
+        20:20vh,
+        15:15vh,
+        10:10vh,
+        5:5vh
+        )
+    ),
+
+  "viewport-width": (
+      property: width,
+      responsive:true,
+      class: vw,
+      values: (
+        300: 300vw,
+        250: 250vw,
+        200: 200vw,
+        150: 150vw,
+        100: 100vw,
+        90:90vw,
+        80:80vw,
+        70:70vw,
+        60:60vw,
+        50:50vw,
+        40:40vw,
+        30:30vw,
+        20:20vw,
+        10:10vw
+        )
+    ),
+
+    "min-viewport-height": (
+      property: min-height,
+      responsive:true,
+      class: min-vh,
+      values: (
+        100: 100vh,
+        95:95vh,
+        90:90vh,
+        85:85vh,
+        80:80vh,
+        75:75vh,
+        70:70vh,
+        65:65vh,
+        60:60vh,
+        55:55vh,
+        50:50vh,
+        45:45vh,
+        40:40vh,
+        35:35vh,
+        30:30vh,
+        25:25vh,
+        20:20vh,
+        15:15vh,
+        10:10vh,
+        5:5vh
+        )
+    ),
+
+    "max-viewport-height": (
+      property: max-height,
+      responsive:true,
+      class: max-vh,
+      values: (
+        200: 200vh,
+        150: 150vh,
+        100: 100vh,
+        95:95vh,
+        90:90vh,
+        85:85vh,
+        80:80vh,
+        75:75vh,
+        70:70vh,
+        65:65vh,
+        60:60vh,
+        55:55vh,
+        50:50vh,
+        45:45vh,
+        40:40vh,
+        35:35vh,
+        30:30vh,
+        25:25vh,
+        20:20vh,
+        15:15vh,
+        10:10vh,
+        5:5vh
+        )
+    ),
+
+    "special-font-size": (
+      property: font-size,
+      responsive:true,
+      class: sfs,
+      values: (
+
+        0:0rem,
+        0_25:0.25rem,
+        0_5:0.5rem,
+        0_75:0.75rem,
+        0_8:0.8rem,
+        0_9:0.9rem,
+        1:1rem,
+        1_25:1.25rem,
+        1_5:1.5rem,
+        1_75:1.75rem,
+        2:2rem,
+        2_5:2.5rem,
+        3:3rem,
+        3_5:3.5rem,
+        4:4rem,
+        4_5:4.5rem,
+        5:5rem,
+        5_5:5.5rem,
+        6:6rem,
+        6_5:6.5rem,
+        7:7rem,
+        7_5:7.5rem,
+        8:8rem,
+        8_5:8.5rem,
+        9:9rem,
+        9_5:9.5rem,
+        10:10rem
+
+        )
+    ),
+
+
+
+), $utilities );
+
+*::selection{
+  background-color: $success;
+  color: $secondary;
+}
+
+
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
