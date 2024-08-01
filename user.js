@@ -4,6 +4,7 @@
     userStr = localStorage.getItem(activeuser);
     if (userStr) {
       user = JSON.parse(userStr);
+      uname.innerHTML = user.uname;
       console.log(user);
       display();
     } else {
